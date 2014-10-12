@@ -25,12 +25,23 @@ In your project's Gruntfile, add a section named `ctrllr` to the data object pas
 ```js
 grunt.initConfig({
   ctrllr: {
-    options: {
-      // Task-specific options go here.
+    all: {
+        options: {
+            server: 'path/to/server'
+        },
+        src: [
+            'path/to/spec-*.js'
+        ]
     },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
+    spec2: {
+        options: {
+            // ...
+        },
+        src: [
+            'path/to/spec-1.js',
+            'path/to/spec-2.js'
+        ]
+    }
   },
 });
 ```
@@ -58,9 +69,9 @@ In this example, the default options are used to do something with whatever. So 
 grunt.initConfig({
   ctrllr: {
     options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
+    src: [
+        'path/to/specs
+    ]
   },
 });
 ```
@@ -72,18 +83,15 @@ In this example, custom options are used to do something else with whatever else
 grunt.initConfig({
   ctrllr: {
     options: {
-      separator: ': ',
-      punctuation: ' !!!',
+        port: 4040
+        server: '/path/to/server'
     },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
+    src: [
+        'path/to/specs
+    ]
   },
 });
 ```
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-## Release History
-_(Nothing yet)_

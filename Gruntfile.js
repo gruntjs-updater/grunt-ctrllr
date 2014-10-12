@@ -45,42 +45,6 @@ module.exports = function(grunt) {
                         'test/fixtures/spec-2.js'
                     ]
                 }
-                /*
-                 ,
-                 custom_options: {
-                 options: {
-                 separator: ': ',
-                 punctuation: ' !!!'
-                 },
-                 files: {
-                 'tmp/custom_options': [
-                 'test/fixtures/testing',
-                 'test/fixtures/123'
-                 ]
-                 }
-                 }
-                 */
-
-                // Configuration to be run (and then tested).
-                /*
-                 ctrllr: {
-                 default_options: {
-                 options: {
-                 },
-                 files: {
-                 'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
-                 }
-                 },
-                 custom_options: {
-                 options: {
-                 separator: ': ',
-                 punctuation: ' !!!'
-                 },
-                 files: {
-                 'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
-                 }
-                 }
-                 */
             },
 
             // Unit tests.
@@ -113,6 +77,4 @@ module.exports = function(grunt) {
         'jshint',
         'test'
     ]);
-
-}
-;
+};
