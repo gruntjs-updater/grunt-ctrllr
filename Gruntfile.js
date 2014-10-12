@@ -44,6 +44,12 @@ module.exports = function(grunt) {
                     src: [
                         'test/fixtures/spec-2.js'
                     ]
+                },
+                custom: {
+                    options: require('./test/fixtures/config'),
+                    src: [
+                        'test/fixtures/spec-*.js'
+                    ]
                 }
             },
 

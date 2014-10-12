@@ -20,9 +20,7 @@ module.exports = function(grunt) {
         // Merge task-specific and/or target-specific options with these defaults.
         var done = this.async();
 
-        var options = this.options({
-
-        });
+        var options = this.options({});
 
         if (typeof options.server === 'string') {
             options.server = require(path.resolve(__dirname + '/../' + options.server));
