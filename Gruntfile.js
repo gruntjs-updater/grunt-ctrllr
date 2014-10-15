@@ -47,9 +47,11 @@ module.exports = function(grunt) {
                 },
                 custom: {
                     options: require('./test/fixtures/config'),
-                    src: [
-                        'test/fixtures/spec-*.js'
-                    ]
+                    files: {
+                        src: [
+                            'test/fixtures/spec-*.js'
+                        ]
+                    }
                 }
             },
 
@@ -59,8 +61,7 @@ module.exports = function(grunt) {
             }
 
         }
-    )
-    ;
+    );
 
     // Actually load this plugin's task(s).
     grunt.loadTasks('tasks');

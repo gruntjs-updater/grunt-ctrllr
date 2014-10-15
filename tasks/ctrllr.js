@@ -23,13 +23,14 @@ module.exports = function(grunt) {
         var options = this.options({});
 
         if (typeof options.server === 'string') {
-            options.server = require(path.resolve(__dirname + '/../' + options.server));
+            options.server = require(path.resolve('./' + options.server));
         }
 
         var c = new CTRLLR(options);
 
         // Iterate over all specified file groups.
         this.files.forEach(function(f) {
+
             f.src.filter(function(filepath) {
                 // Warn on and remove invalid source files (if nonull was set).
                 if (!grunt.file.exists(filepath)) {
@@ -39,11 +40,9 @@ module.exports = function(grunt) {
                     return true;
                 }
             }).map(function(filepath) {
-                // Read file source, add to tests
-                // var test = grunt.file.read(filepath);
                 console.log('Adding test.', filepath);
 
-                var test = require(path.resolve(__dirname + '/../' + filepath));
+                var test = require(path.resolve('./' + filepath));
                 c.add(test);
                 return test;
             });
