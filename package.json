@@ -1,7 +1,7 @@
 {
   "name": "grunt-ctrllr",
   "description": "Grunt task for running ctrllr API tests.",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "homepage": "https://github.com/CtrlLA/grunt-ctrllr",
   "author": {
     "name": "ishmaelthedestroyer",
@@ -27,7 +27,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "ctrllr": "^0.1.7"
+    "ctrllr": "^0.1.8"
   },
   "devDependencies": {
     "body-parser": "^1.9.0",
